@@ -57,3 +57,11 @@ Calculating allele frequencies... done.
 Variant lists written to chr19_human_pruned.prune.in and
 chr19_human_pruned.prune.out .
 End time: Tue Mar 28 12:46:58 2023```
+
+
+### Pre-processing 3 - Filter the VCF file based on the pruning done in PLINK
+
+We run VCFtools once more to filter our VCF file with the pruned SNPS
+
+```vcftools --vcf chr19_human_data_edited.recode.vcf --recode --snps chr19_human_pruned.prune.out --out chr19_human_pruned```
+
