@@ -8,6 +8,12 @@ There are several pre-processing steps that I conducted that I will outline belo
 
 Due to time and processor constraints we will be anlayzing only a small portion of Human Chromosome 19 
 
+Here is a snapshot of the region we are looking at. I used the 1000 Genomes data to look at the common SNPs (there are so many it's just a black line at the bottom) 
+
+![Screenshot 2023-03-29 075252](https://user-images.githubusercontent.com/47755288/228527739-9ed8e3ca-28c5-4ac9-b18d-4cdc0ec311fc.png)
+
+
+
 I started with a VCF file of all positions in Chr 19 in the 1000 Genomes data VCF. This involves using **VCFtools** which is already loaded onto the UNC-Charlotte HPC and can be accessed using ```ml vcftools```
 
 The command to conduct this filtering is
