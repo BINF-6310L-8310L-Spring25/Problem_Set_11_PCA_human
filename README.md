@@ -87,14 +87,6 @@ The code should look like this:
 
 snps<-vcfR::read.vcfR("chr19_human_pruned.recode.vcf", convertNA = TRUE)
 
-
-
-snps_num<-vcfR::extract.gt(snps, 
-                           element="GT", 
-                           IDtoRowNames=F, 
-                           as.numeric=T, 
-                           convertNA=T, 
-                           return.alleles=F)
 ```
 
 # Quesstion A1
@@ -110,7 +102,16 @@ snps_num<-vcfR::extract.gt(snps,
 
 Use the ```extract.gt()``` function to obtain the genotype file from the VCF. 
 
-Transpose the genotype file 
+```
+snps_num<-vcfR::extract.gt(snps, 
+                           element="GT", 
+                           IDtoRowNames=F, 
+                           as.numeric=T, 
+                           convertNA=T, 
+                           return.alleles=F)
+```
+
+**Transpose** the genotype file.
 
 # Question B1 
 - How many missing data points are in our data? 
