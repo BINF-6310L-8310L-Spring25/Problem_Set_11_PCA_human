@@ -1,4 +1,4 @@
-# Problem_Set_11
+# Problem_Set_12
 
 In this week's problem set we will be conducting a PCA on human SNP data.
 
@@ -159,14 +159,17 @@ Use ggplot to produce a plot on PC1 and PC2. Color the points with the Sex group
 
 ### Problem F - Get Clusters 
 
-Use thhe ```fviz_nbclust()``` function to plot the number number of clusters **in the PCA coordinates for PC1 and PC2**against the within sum-of-squares. Remeber, we are looking for where the "elbow" of that plot is (aka where the improvement starts to decrease in magnitude)
+Use thhe ```fviz_nbclust()``` function to plot the number of clusters **in the PCA coordinates for PC1 and PC2**against the within sum-of-squares. Remember, we are looking for where the "elbow" of that plot is (aka where the improvement starts to decrease in magnitude)
 
+# Question F1
 - Based on this how many clusters would you propose for k-means clustering? 
-- Cluster the PC coordinates based on this number of clusters and visualize the results and color the points by these clusters
 
-We want to look at how well our PCA reflects the Super Populations. Extract the columns that contain the Super Population and the cluster assignments. Use the ```table()``` function to sumarize the counts for each population in the groups. 
 
-- Do any of your clusters contain only (or mostly) a single super population? 
+Cluster the PC coordinates based on this number of clusters and visualize the results and color the points by these clusters
+We want to look at how well our PCA reflects the Super Populations. Extract the columns that contain the Super Population and the cluster assignments. Use the ```table()``` function to summarize the counts for each population in the groups. 
+
+# Question F2
+- Do any of your clusters contain only (or mostly) a single superpopulation? 
 
 
 ### Knit and upload your document to the Canvas site
