@@ -75,42 +75,54 @@ We run VCFtools once more to filter our VCF file with the pruned SNPS
 
 ## PROBLEM SET 
 
-Below you will find the questions for this week's problem set 
+Below, you will find the questions for this week's problem-set 
 
 
-### Problem 1 - Import VCF file 
+### Problem A - Import VCF file 
 
 Using the vcfR package read in the VCF file chr19_human_pruned.recode.vcf
 
+# Quesstion A1
 - How many variants are there in the data file?
-- How man individuals are there in the data file?
 
+# Question A2
+- How many individuals are in the data file?
 
-### Problem 2 - Data quality checks 
+&nbsp;
+&nbsp;
+
+### Problem B - Data quality checks 
 
 Use the ```extract.gt()``` function to obtain the genotype file from the VCF. 
 
 Transpose the genotype file 
 
-- How many missing datapoints are in our data? 
+# Question B1 
+- How many missing data points are in our data? 
 
 Use the ```remove_constant()``` function from the ```janitor``` package to remove columns that are invariant in our dataset
 
+# Question B2
 - How many rows (SNPs) were removed from our dataset?
 
+&nbsp;
+&nbsp;
 
-### Problem 3 - PCA 
+### Problem 3 - PCA C
 
 Use ```prcomp()``` to run a PCA on our SNP data 
 
 Use the ```fviz_eig()`` function from the ```factoextra``` package create the scree plot
 
-- Approximatley how much variation is explained on the first principal component (dimension 1)?
+# Question C1
+- Approximately how much variation is explained on the first principal component (dimension 1)?
 
+&nbsp;
+&nbsp;
 
-### Problem 4 - Add labels to the PCA data
+### Problem D - Add labels to the PCA data
 
-We will use ggplot to visualize our PCA because it is more flexible. Follow the below steps to format the data and import data labels
+We will use ggplot to visualize our PCA because it is more flexible. Follow the below steps to format the data and import data labels.
 
 1. Save the PCA coordiantes from the PCA output into a new matrix. 
 2. Convert this matrix to a data frame.
@@ -122,20 +134,30 @@ To merge these two we will use the join functions of titdyr. These functions are
 5. Use the ```left_join()``` function to merge your PCA points with the sample data. You want the PCA points to be on the _left side_ of this command. This will keep all observations in the first dataset and keep only the matching data points in the second dataset 
 6. You can use the function ```table(dat$col)``` to summarize a column or row in a dataframe. 
 
-Questions:
+# Question D1
 - In the data, how many individuals are found in the AFR (African) Superpopulation?
+
+# Question D2
 - In the data, how many individuals are female (sex)
 
+&nbsp;
+&nbsp;
 
-### Problem 5 - Visualize the data
+### Problem E - Visualize the data
 
-- Use ggplot to produce a plot on PC1 and PC2. Color the points with the SuperPopulation groups
+Use ggplot to produce a plot on PC1 and PC2. Color the points with the SuperPopulation groups
+
+# Question E1
 - What Superpopulation appears to be _the most distinct_ from the other populations?
-- Use ggplot to produce a plot on PC1 and PC2. Color the points with the Sex groups
+
+
+Use ggplot to produce a plot on PC1 and PC2. Color the points with the Sex groups
+
+# Question E2
 - Does our data cluster by sex?
 
 
-### Problem 6 - Get Clusters 
+### Problem F - Get Clusters 
 
 Use thhe ```fviz_nbclust()``` function to plot the number number of clusters **in the PCA coordinates for PC1 and PC2**against the within sum-of-squares. Remeber, we are looking for where the "elbow" of that plot is (aka where the improvement starts to decrease in magnitude)
 
