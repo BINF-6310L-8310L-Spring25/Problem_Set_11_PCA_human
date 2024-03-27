@@ -82,6 +82,21 @@ Below, you will find the questions for this week's problem-set
 
 Using the vcfR package read in the VCF file chr19_human_pruned.recode.vcf
 
+The code should look like this:
+```
+
+snps<-vcfR::read.vcfR("chr19_human_pruned.recode.vcf", convertNA = TRUE)
+
+
+
+snps_num<-vcfR::extract.gt(snps, 
+                           element="GT", 
+                           IDtoRowNames=F, 
+                           as.numeric=T, 
+                           convertNA=T, 
+                           return.alleles=F)
+```
+
 # Quesstion A1
 - How many variants are there in the data file?
 
