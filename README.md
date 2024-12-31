@@ -1,4 +1,4 @@
-# Problem_Set_12
+# Problem_Set_11
 
 In this week's problem set we will be conducting a PCA on human SNP data.
 
